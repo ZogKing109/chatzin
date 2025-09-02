@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imgm/bitcoin.png" type="image/x-icon">
+    <title>chatGPT</title>
+    <style>
+        .res{
+            border-style: solid;
+            border-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <form id="chat">
+        <p>computação na nuvem, <br>
+            infraestrutura de TI,<br>
+            SaaS, PaaS, IaaS, virtualização</p>
+        <label for="input1">qual pesquisa</label>
+        <input type="text" id="escolha">
+        <button type="submit">verificar</button>
+    </form>
+    <br>
+    <div class="res">
+        <h3>Resultado</h3>
+        <p id="resultado"></p>
+        <img src="" alt="" id="imagem">
+    </div>
+    
+    <script>
+        const form = document.getElementById('chat');
+
+        form.addEventListener('submit',function(event){
+            event.preventDefault();
+            const resultado = document.getElementById('resultado');
+            const esc = document.getElementById('escolha').value;
+            const imagem = document.getElementById('imagem');
+
+            if(esc == "computação na nuvem"){
+                imagem.src = "../chatGPT/imgm/CN.png"
+
+            } else if ( esc == "infraestrutura de TI"){
+                resultado.innerHTML += '<h1>Infraestrutura de TI:</h1>    <h2>Sumario:</h2><p>A Infraestrutura de TI é a base tecnológica usada para suportar todos os istemas e serviços de uma organização. Inclui servidores, redes, <br> hardware, software e processos que asseguram o funcionamento adequado das operações de TI.   <h2>Empresas:</h2>    Amazon (AWS): Usa e oferece IaaS para e-commerce e serviços em nuvem. <br>    Google: Utiliza infraestrutura para pesquisa, YouTube e Google Cloud. <br>    Microsoft: Opera Windows e Office 365, além de oferecer Azure.    <h2>Imagem de exemplo:</h2>    <img src="imgm/TI.png" alt="aaahahahhah" id="CP">    <h2>Resumo:</h2>    <p>        Infraestrutura de TI e  base one sera armazenada todos seus dados codigos(software em geral)        sendo tanto fisico como algum app ou <br>banco de dados com foco em gerir o armazenamento.    </p><br><br><br><br>';
+
+            } else if ( esc == "SaaS"){
+                resultado.innerHTML += '<h1>SaaS (Software as a Service):</h1>    <h2>Sumario:</h2>    <p>O SaaS oferece aplicativos de software via nuvem, permitindo o acesso remoto sem a necessidade de instalação local</p>    <h2>Empresas:</h2>    Salesforce: CRM em nuvem para gestão de vendas e clientes. <br>    Dropbox: Armazenamento e compartilhamento de arquivos em nuvem. <br>    Slack: Comunicação e colaboração em equipe via nuvem.    <h2>Imagem de exemplo:</h2>    <img src="imgm/SaaS.png" alt="aaahahahhah" id="CP">    <h2>Resumo:</h2>    <p>        são apps na nuvem, sendo serviços onlines, como alguns sites ex : Spotify.    </p><br><br><br><br>';
+
+            } else if ( esc == "PaaS"){
+                resultado.innerHTML += '<h1>PaaS (Platform as a Service):</h1>    <h2>Sumario:</h2>    <p>O PaaS fornece uma plataforma para o desenvolvimento de aplicações sem que o usuário precise gerenciar a infraestrutura subjacente.</p>    <h2>Empresas:</h2>    Spotify: Usa Google Cloud para escalar sua plataforma de streaming. <br>    Uber: Utiliza AWS e Google Cloud para gerenciar sua plataforma de transporte. <br>    Airbnb: Usa AWS para desenvolver sua plataforma de hospedagem.    <h2>Imagem de exemplo:</h2>    <img src="imgm/PaaS.png" alt="aaahahahhah" id="CP">    <h2>Resumo:</h2>    <p>        É um software que te oferece as ferramentas para criar seu proprio software, que você pode vender a outras pessoas.   </p><br><br><br><br>';
+
+            } else if ( esc == "IaaS"){
+                resultado.innerHTML += '<h1>IaaS (Infrastructure as a Service):</h1>    <h2>Sumario:</h2>    <p>O IaaS fornece infraestrutura de TI sob demanda (como servidores virtuais, redes e armazenamento).<br>A principal vantagem é a escalabilidade sem precisar de grandes investimentos em hardware.</p>    <h2>Empresas:</h2>    Netflix: Usa AWS para escalar sua plataforma de streaming. <br>    Adobe: Utiliza Azure para hospedar seus serviços de Creative Cloud. <br>    IBM: Usa IBM Cloud para suas operações e serviços em nuvem.    <h2>Imagem de exemplo:</h2>    <img src="imgm/IaaS.png" alt="aaahahahhah" id="CP">    <h2>Resumo:</h2>    <p>        É o serviço que fornece estrutura de armazenamento na nuvem onde o usuário não precissa se preucupar em mater e gerenciar um servidor.    </p><br><br><br><br>';
+
+            } else if ( esc == "virtualização"){
+                resultado.innerHTML += '<h1>Virtualização:</h1>    <h2>Sumario:</h2>    <p>A Virtualização permite que múltiplos sistemas operacionais e aplicativos funcionem em uma única máquina <br>física, proporcionando maior eficiência e uso otimizado dos recursos.</p>    <h2>Empresas:</h2>    VMware: Fornece soluções de virtualização de servidores e desktops. <br>    Microsoft: Usa Hyper-V para criar ambientes virtuais. <br>     Intel: Utiliza virtualização em seus data centers para otimizar recursos.    <h2>Imagem de exemplo:</h2>    <img src="imgm/Virtualização.png" alt="aaahahahhah" id="CP">    <h2>Resumo:</h2>    <p>        É como ospedar um arquivo com diferentes sistemas ou software em que eles co-existem ao mesmo tempo.    </p><br><br><br><br>';
+
+            }
+        });    
+    </script>
+</body>
+</html>
